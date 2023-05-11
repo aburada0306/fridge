@@ -15,11 +15,11 @@ class FoodsController < ApplicationController
       end
   end
 
-  
 
+  
   private
 
   def food_form_params
-    params.require(:food_form).permit(:name, :tag_name)
+    params.require(:food_form).permit(:name, :tagname)
   end
 end

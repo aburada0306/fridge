@@ -14,9 +14,14 @@ class CooksController < ApplicationController
       end
   end
 
+  def search
+    @q = CookTagRelation.ransack(params[:q])
+    @cook_tag_relations = @q.result
+  end
+
   private
 
   def cook_form_params
-    params.require(:cook_form).permit(:name, :tag_name)
+    params.require(:cook_form).permit(:name, :tagname)
   end
 end

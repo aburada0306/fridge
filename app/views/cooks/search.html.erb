@@ -1,0 +1,19 @@
+<h3>検索ページ</h3>
+<%= search_form_for @q, url: search_cooks_path, html: {id: "detailed-search-form"} do |f| %>
+<div class="search-field">
+  <%= f.label :tag_tagname_cont, '材料名' %>
+  <br>
+  <%= f.text_field :tag_tagname_cont, placeholder: '材料名' %>
+</div>
+<%= f.submit '検索' %>
+<% end %>
+
+<h3><%= link_to 'メインページに戻る', root_path%></h3>
+
+<h3>検索結果</h3>
+<div class="contents row">
+  <% @cook_tag_relations.each do |t| %>
+  <td><%= t.cook.name %></td>
+  <% end %>
+</div>
+

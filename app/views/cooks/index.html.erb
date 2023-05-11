@@ -3,10 +3,12 @@
   <%= f.text_field :name, placeholder: '料理名' %>
 </div>
 <div class="tag-field">
-  <%= f.text_field :tag_name, placeholder: '料理で使う食材(タグ)' %>
+  <%= f.text_field :tagname, placeholder: '料理で使う食材(タグ)' %>
 </div>
 <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
+
+<h3><%= link_to 'メインページに戻る', root_path%></h3>
 
 <h1>作成済みの料理名</h1>
 <div class="contents row">
