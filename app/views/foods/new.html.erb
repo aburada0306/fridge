@@ -1,0 +1,7 @@
+<%= form_with model: @food_form, url: foods_path,method: :post, class: 'form', id: 'new_food', local: true do |f| %>
+  <div class="form-input">
+  <div class="tag-field">
+    <%= f.text_field :tag_name, placeholder: '野菜の分類' %>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>

@@ -1,2 +1,8 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<h1><%= link_to '冷蔵庫に入れる', new_food_path%></h1>
+<h1><%= link_to '料理を作る', cooks_path%></h1>
+
+<div class="contents row">
+  <% @foods.each do |food| %>
+      <p><%= food.name %></p>
+  <% end %>
+</div>
